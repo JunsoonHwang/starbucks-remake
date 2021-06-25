@@ -36,4 +36,4 @@
 9. searchInputEl.setAttribute('placeholder', '통합검색');
   해당 요소에 html 요소를 지정하는 메소드, 검색창에 통합검색 나타남
 
-10. 
+10. 메인 메뉴 구조
