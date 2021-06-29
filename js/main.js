@@ -16,3 +16,13 @@ searchInputEl.addEventListener('blur', function () {
   searchInputEl.setAttribute('placeholder', '')
 })
 
+const badgeEl = document.querySelector('header .badges')
+
+window.addEventListener('scroll', _.throttle(function () {
+  console.log(window.scrollY)
+  if(scrollY > 500) {
+    badgeEl.style.display = 'none'
+  } else {
+    badgeEl.style.display = 'block'
+  }
+},300))

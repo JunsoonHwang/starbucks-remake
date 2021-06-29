@@ -37,3 +37,18 @@
   해당 요소에 html 요소를 지정하는 메소드, 검색창에 통합검색 나타남
 
 10. 메인 메뉴 구조
+
+11. div클래스 안에 img태그를 사용 한 경우 border-radius를 사용해도
+    적용이 안되는데 이는 div클래스에는 적용이 되었는데 그 위를 img가 덮고 있어서 안되는 것 div클래스에 overflow: hidden;을 적용해서
+    이미지가 div클래서를 넘지 못하도록 해주면 해결
+
+12. const badgeEl = document.querySelector('header .badges')
+
+    window.addEventListener('scroll', _.throttle(function () {
+      console.log(window.scrollY)
+      if(scrollY > 500) {
+        badgeEl.style.display = 'none'
+      } else {
+        badgeEl.style.display = 'block'
+      }
+    },300))
