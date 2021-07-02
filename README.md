@@ -42,13 +42,33 @@
     적용이 안되는데 이는 div클래스에는 적용이 되었는데 그 위를 img가 덮고 있어서 안되는 것 div클래스에 overflow: hidden;을 적용해서
     이미지가 div클래서를 넘지 못하도록 해주면 해결
 
-12. const badgeEl = document.querySelector('header .badges')
+12. 뱃지 스크롤시 지우고 보이기
 
-    window.addEventListener('scroll', _.throttle(function () {
-      console.log(window.scrollY)
-      if(scrollY > 500) {
-        badgeEl.style.display = 'none'
-      } else {
-        badgeEl.style.display = 'block'
-      }
-    },300))
+const badgeEl = document.querySelector('header .badges')
+
+window.addEventListener('scroll', _.throttle(function () {
+  console.log(window.scrollY)
+  if(scrollY > 500) {
+    badgeEl.style.display = 'none'
+  } else {
+    badgeEl.style.display = 'block'
+  }
+},300))
+
+13. 이미지 순서대로 나타내기
+
+const fadeEls = document.querySelectorAll('.visual .fade-in')
+fadeEls.forEach(function (fadeEl, index) {
+  gsap.to(fadeEl, 1, {
+    delay: (index + 1) * .7,
+    opacity: 1
+  })
+})
+
+14. notice 부분 width: 50%로 좌우 나누려면
+    좌우값 필요
+
+15. justify-content: flex-end;
+    align-items: center;  정렬 안될 시
+
+    display: flex; 해줄 것
