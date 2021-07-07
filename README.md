@@ -75,3 +75,20 @@ fadeEls.forEach(function (fadeEl, index) {
 
 16. 브라우저 확대시 요소 위치 변경될 시
     위치 값을 %와 margin 속성을 통해 지정할 것
+
+17. 해당 버튼 클릭시 밑에 창을 숨김 처리, 보임 처리 해주는 코드
+
+  const promotionEl = document.querySelector('.promotion')
+  const promotionToggleBtnEl = document.querySelector('.toggle-promotion')
+  let isHidePromotion = false
+
+  promotionToggleBtnEl.addEventListener('click', function () {
+    isHidePromotion = !isHidePromotion
+
+    if (isHidePromotion) {
+      promotionEl.classList.add('hide')
+    } else {
+      promotionEl.classList.remove('hide')
+    }
+  })
+
