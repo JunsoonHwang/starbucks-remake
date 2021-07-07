@@ -60,7 +60,7 @@ new Swiper('.promotion .swiper-container', {
     clickable: true,
   },
   navigation: {
-    prevEl: 'swiper-prev',
-    nextEl: 'swiper-next',
+    prevEl: '.promotion .swiper-prev',
+    nextEl: '.promotion .swiper-next'
   }
 })

@@ -72,3 +72,6 @@ fadeEls.forEach(function (fadeEl, index) {
     align-items: center;  정렬 안될 시
 
     display: flex; 해줄 것
+
+16. 브라우저 확대시 요소 위치 변경될 시
+    위치 값을 %와 margin 속성을 통해 지정할 것
